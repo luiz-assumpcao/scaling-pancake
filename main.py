@@ -11,5 +11,5 @@ async def hello_world():
 async def test_function():
     return {
         "test": True,
-        "random_number": random.randint(0, 1000)
+        "random_number": random.randint(0, 20000)
     }
