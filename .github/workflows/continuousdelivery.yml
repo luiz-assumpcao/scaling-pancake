@@ -17,3 +17,12 @@ jobs:
           path: |
             main.py
             READ.md
+  deploy:
+    runs-on: ubuntu-latest
+    needs: deliver
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: zipedproject.zip
+      - name: Display structure of downloaded files
+        run: ls -R
